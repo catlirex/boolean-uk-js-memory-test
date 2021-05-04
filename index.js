@@ -2,8 +2,6 @@
 // - After 15 seconds, ask them to enter each number in order
 // - Let them know how many they got right!
 
-
-
 function createRandomNumber (numberOfNumber){
     const randomNumber = []
     for (let i = 0; i < numberOfNumber ; i++){
@@ -33,5 +31,4 @@ let userAnswer = []
 alert(`Remember the following numbers in order:
 ${randomNumberArray}`)
     
-setTimeout(getAnswer(), 1000);
-
+setTimeout(getAnswer(), 15000);
