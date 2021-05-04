@@ -2,6 +2,8 @@
 // - After 15 seconds, ask them to enter each number in order
 // - Let them know how many they got right!
 
+function playMemoryTest(numbersToDisplay) {
+
 function createRandomNumber (numberOfNumber){
     const randomNumber = []
     for (let i = 0; i < numberOfNumber ; i++){
@@ -15,7 +17,7 @@ function createRandomNumber (numberOfNumber){
 function getAnswer(){
 
     for(i = 1; i <= randomNumberArray.length; i++){
-    userAnswer.push(prompt(`Enter the ${ordinal(i)} numbers in order now:`));
+    userAnswer.push(prompt(`Enter the ${ordinal(i)} number:`));
     }
     userAnswer = userAnswer.map(Number)
     for(i = 0; i <= randomNumberArray.length; i++ ){
@@ -41,13 +43,18 @@ function ordinal(number) {
     return (number + suffix);
 }
 
-
-
 // RUN THE GAME 
-let randomNumberArray = createRandomNumber(4)
+    
+let randomNumberArray = createRandomNumber(numbersToDisplay)
 let userAnswer = []
 
 alert(`Remember the following numbers in order:
 ${randomNumberArray}`)
     
-setTimeout(getAnswer(), 15000);
+setTimeout(getAnswer, 15000);
+
+}
+
+
+playMemoryTest(5)
+
