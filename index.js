@@ -13,7 +13,6 @@ function createRandomNumber (numberOfNumber){
     return randomNumber
 }
 
-
 function getAnswer(){
 
     for(i = 1; i <= randomNumberArray.length; i++){
